@@ -8,10 +8,10 @@ A comprehensive collection of four homework assignments exploring modern databas
 
 | Module | Database/Technology | Dataset | Key Concepts |
 |--------|---------------------|---------|--------------|
-| **MongoDB** | Document Store | Amazon Fine Food Reviews (568K reviews) | Sentiment Analysis, Recommendations |
-| **InfluxDB** | Time-Series DB | LAPD Crime Data (1M+ records) | Time-Series Analysis, Clustering |
-| **Neo4J** | Graph Database | arXiv AI Publications (8K papers) | Graph Modeling, Network Analysis |
-| **MapReduce** | Distributed Computing | Highway Toll Data (100K synthetic) | PySpark vs MRJob Comparison |
+| **Amazon Fine Food Reviews** | Document Store | Amazon Fine Food Reviews (568K reviews) | Sentiment Analysis, Recommendations |
+| **LAPD Crime Data** | Time-Series DB | LAPD Crime Data (1M+ records) | Time-Series Analysis, Clustering |
+| **arXiv** | Graph Database | arXiv AI Publications (8K papers) | Graph Modeling, Network Analysis |
+| **Distributed Computing** | Map-reduce approach | Highway Toll Data (100K synthetic) | PySpark vs MRJob Comparison |
 
 ## 📁 Repository Structure
 
