@@ -1,109 +1,140 @@
-# 🔗 DataNexus
+# dataNexus 🗄️
 
-**Progetti di Sistemi Informativi Evoluti e Big Data** | A.A. 2025-2026
+**Big Data Project Collection** — Advanced Information Systems and Big Data Course (A.Y. 2025-2026)
 
-Una raccolta di quattro progetti che esplorano le principali tecnologie NoSQL e Big Data: dall'analisi di sentiment con MongoDB, al monitoraggio real-time con InfluxDB, ai grafi di conoscenza con Neo4j, fino all'elaborazione distribuita con MapReduce.
+A comprehensive collection of four homework assignments exploring modern database technologies and distributed computing paradigms for big data processing.
 
----
+## 📊 Project Overview
 
-## 📁 Struttura del Repository
+| Module | Database/Technology | Dataset | Key Concepts |
+|--------|---------------------|---------|--------------|
+| **MongoDB** | Document Store | Amazon Fine Food Reviews (568K reviews) | Sentiment Analysis, Recommendations |
+| **InfluxDB** | Time-Series DB | LAPD Crime Data (1M+ records) | Time-Series Analysis, Clustering |
+| **Neo4J** | Graph Database | arXiv AI Publications (8K papers) | Graph Modeling, Network Analysis |
+| **MapReduce** | Distributed Computing | Highway Toll Data (100K synthetic) | PySpark vs MRJob Comparison |
+
+## 📁 Repository Structure
 
 ```
-DataNexus/
-├── homework1-mongodb/      # Sentiment Analysis su Amazon Reviews
-├── homework2-influxdb/     # Analisi Crimini LAPD (Time Series)
-├── homework3-neo4j/        # Grafo Articoli Scientifici arXiv
-├── homework4-mapreduce/    # Analisi Pedaggi Autostradali
-└── docs/                   # Documentazione e report PDF
+dataNexus/
+├── MongoDB/
+│   ├── soluzione/
+│   │   ├── homework_mongodb.ipynb    # Main notebook
+│   │   └── relazione/                # Report (PDF + DOCX)
+│   └── consegna.pdf                  # Assignment spec
+│
+├── InfluxDB/
+│   ├── soluzione/
+│   │   ├── homework_influxdb.ipynb   # Main notebook  
+│   │   └── relazione/                # Report (PDF + DOCX)
+│   └── consegna.pdf                  # Assignment spec
+│
+├── Neo4J/
+│   ├── soluzione/
+│   │   ├── homework_neo4j.ipynb      # Main notebook
+│   │   ├── visualisation1.png        # Graph visualizations
+│   │   ├── visualisation2.png
+│   │   └── relazione/                # Report (PDF + DOCX)
+│   └── consegna/
+│       ├── consegna.pdf              # Assignment spec
+│       └── MaterialeUtile_Homework/  # Source data files
+│
+├── map-reduce/
+│   ├── soluzione/
+│   │   ├── homework_mapreduce.ipynb  # Main notebook
+│   │   ├── output/                   # Generated scripts & data
+│   │   │   ├── mapreduce_pyspark.py
+│   │   │   ├── mapreduce_mrjob.py
+│   │   │   └── caselli_autostradali.csv
+│   │   └── relazione/                # Report (PDF + DOCX)
+│   └── consegna.pdf                  # Assignment spec
+│
+├── LICENSE
+├── .gitignore
+└── README.md
 ```
 
----
+## 🛠️ Technologies & Tools
 
-## 🚀 Progetti
+- **Databases:** MongoDB 6.0, InfluxDB 2.7, Neo4J with APOC
+- **Languages:** Python 3.10+, Cypher, Flux
+- **Frameworks:** PySpark, MRJob
+- **Libraries:** pymongo, influxdb-client, neo4j, pandas, scikit-learn, matplotlib, networkx, vaderSentiment
 
-### 1️⃣ MongoDB — Sentiment Analysis
-Analisi di recensioni Amazon Fine Food con sistema di raccomandazione.
+## 📝 Module Descriptions
 
-**Tecnologie:** MongoDB, Python, VADER, TF-IDF  
-**Features:**
-- Collezioni separate per livello di score
-- Sentiment analysis automatica
-- Sistema di raccomandazione ibrido
-- Rilevamento anomalie temporali
+### 1. MongoDB — Sentiment Analysis on Product Reviews
+Analysis of Amazon Fine Food Reviews dataset using MongoDB's aggregation framework:
+- Sentiment scoring with VADER
+- Product recommendation system using TF-IDF and cosine similarity
+- Temporal trend analysis for detecting review anomalies
 
----
+### 2. InfluxDB — Crime Pattern Analysis
+Time-series analysis of Los Angeles Police Department crime data:
+- Temporal crime pattern detection
+- Geographical clustering using K-Means
+- Flux queries for time-windowed aggregations
 
-### 2️⃣ InfluxDB — Crime Data Analytics
-Analisi serie temporali dei crimini registrati dal LAPD (2020-2025).
+### 3. Neo4J — Academic Publication Network
+Graph modeling of arXiv AI papers and their relationships:
+- Author co-authorship networks
+- Topic clustering and research trend analysis
+- Cypher queries for path finding and centrality metrics
 
-**Tecnologie:** InfluxDB, Python, Pandas, Matplotlib  
-**Features:**
-- Sistema di alert (warning/alarm) automatizzato
-- Analisi stagionale della criminalità
-- Clustering incrementale per pattern detection
-- Dashboard con metriche real-time
+### 4. MapReduce — Highway Toll Analysis
+Comparison of distributed computing approaches:
+- Synthetic dataset generation (100K highway transits)
+- MRJob implementation (Hadoop simulation)
+- PySpark implementation (in-memory processing)
+- Performance benchmarking: 2015 vs 2025 toll variations
 
----
+## 🚀 Getting Started
 
-### 3️⃣ Neo4j — Knowledge Graph
-Grafo di pubblicazioni scientifiche AI da arXiv.
+### Prerequisites
+```bash
+# Python environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-**Tecnologie:** Neo4j, Cypher, Python, BERTopic  
-**Features:**
-- Rete di co-authorship
-- Topic modeling con similarità di Jaccard pesata
-- Shortest path tra autori
-- Visualizzazione grafi interattiva
+# Install common dependencies
+pip install pandas numpy matplotlib scikit-learn jupyter
+```
 
----
-
-### 4️⃣ MapReduce — Distributed Computing
-Analisi pedaggi autostradali con paradigma MapReduce.
-
-**Tecnologie:** PySpark, mrjob, Python  
-**Features:**
-- Confronto pedaggi 2015 vs 2025
-- Implementazione con Combiner
-- Benchmark mrjob vs PySpark
-
----
-
-## 🛠️ Requisiti
+### Running the Notebooks
+Each module is self-contained. Navigate to the desired module and run the Jupyter notebook:
 
 ```bash
-# Python 3.10+
-pip install pymongo influxdb-client neo4j pandas matplotlib plotly
-pip install vaderSentiment scikit-learn bertopic sentence-transformers
-pip install pyspark mrjob
+cd MongoDB/soluzione
+jupyter notebook homework_mongodb.ipynb
 ```
 
----
+> **Note:** Some notebooks include setup cells for installing databases (MongoDB, InfluxDB) designed for Google Colab environments. For local execution, ensure the respective databases are installed and running.
 
-## 📊 Dataset
+## 📈 Sample Results
 
-| Progetto | Dataset | Fonte |
-|----------|---------|-------|
-| MongoDB | Amazon Fine Food Reviews | [Kaggle](https://www.kaggle.com/datasets/snap/amazon-fine-food-reviews) |
-| InfluxDB | Crime Data 2020-Present | [Data.gov](https://catalog.data.gov/dataset/crime-data-from-2020-to-present) |
-| Neo4j | arXiv AI Papers | Allegato |
-| MapReduce | Pedaggi Autostradali | Generato |
+### MongoDB — Top 5 Products by Average Rating
+| Product ID | Average Rating | Review Count |
+|------------|---------------|--------------|
+| B001EO5Y8Q | 5.00 | 41 |
+| B002QWP8K2 | 5.00 | 40 |
+| B007PA32L2 | 5.00 | 37 |
+| B004I8W7AM | 5.00 | 35 |
+| B003LSTDKK | 5.00 | 31 |
 
----
+### MapReduce — Toll Variation 2015 → 2025
+| Vehicle Type | 2015 Avg (€) | 2025 Avg (€) | Variation |
+|--------------|--------------|--------------|-----------|
+| Auto | 7.17 | 9.33 | +30.1% |
+| Moto | 4.31 | 5.74 | +33.2% |
+| Furgone | 11.46 | 15.06 | +31.4% |
+| Camion | 21.54 | 28.60 | +32.8% |
+| Bus | 17.29 | 22.99 | +33.0% |
 
-## 👤 Autore
+## 📄 License
 
-**Federico Sabbadini**  
-Università degli Studi di Pavia  
-Corso di Sistemi Informativi Evoluti e Big Data
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
----
+## 🎓 Acknowledgments
 
-## 📄 Licenza
-
-Questo progetto è rilasciato sotto licenza MIT. Vedi [LICENSE](LICENSE) per dettagli.
-
----
-
-<p align="center">
-  <i>Built with ☕ and curiosity</i>
-</p>
+- Course: *Advanced Information Systems and Big Data* — A.Y. 2025-2026
+- Datasets: Amazon Fine Food Reviews (Kaggle), LAPD Crime Data, arXiv Papers
