@@ -17,19 +17,19 @@ A comprehensive collection of four homework assignments exploring modern databas
 
 ```
 dataNexus/
-├── MongoDB/
+├── Amazon Fine Food Reviews/         # MongoDB
 │   ├── soluzione/
 │   │   ├── homework_mongodb.ipynb    # Main notebook
 │   │   └── relazione/                # Report (PDF + DOCX)
 │   └── consegna.pdf                  # Assignment spec
 │
-├── InfluxDB/
+├── LAPD Crime Data/                  # InfluxDB
 │   ├── soluzione/
 │   │   ├── homework_influxdb.ipynb   # Main notebook  
 │   │   └── relazione/                # Report (PDF + DOCX)
 │   └── consegna.pdf                  # Assignment spec
 │
-├── Neo4J/
+├── arXiv AI Publications/            # Neo4J
 │   ├── soluzione/
 │   │   ├── homework_neo4j.ipynb      # Main notebook
 │   │   ├── visualisation1.png        # Graph visualizations
@@ -39,7 +39,7 @@ dataNexus/
 │       ├── consegna.pdf              # Assignment spec
 │       └── MaterialeUtile_Homework/  # Source data files
 │
-├── map-reduce/
+├── Distributed Computing/            # map-reduce
 │   ├── soluzione/
 │   │   ├── homework_mapreduce.ipynb  # Main notebook
 │   │   ├── output/                   # Generated scripts & data
