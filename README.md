@@ -39,7 +39,7 @@ dataNexus/
 │       ├── consegna.pdf              # Assignment spec
 │       └── MaterialeUtile_Homework/  # Source data files
 │
-├── Distributed Computing/            # map-reduce
+├── Toll booths Prices Evolution/     # map-reduce Approach
 │   ├── soluzione/
 │   │   ├── homework_mapreduce.ipynb  # Main notebook
 │   │   ├── output/                   # Generated scripts & data
